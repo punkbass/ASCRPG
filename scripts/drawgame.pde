@@ -436,10 +436,10 @@ void draw_bb(x,y) {
   x = 20*x-20;
   y = 20*y-20;
   for(var xi = x; xi < x+20; xi+=5) {
-      for(var yi = y; yi < y+20; yi+=5) {
+      for(var yi = y+5; yi < y+16; yi+=5) {
           noStroke();
           //224, 166, 137
-          fill(random(115,127), random(100,115), 0);
+          randomColor(220,240,155,175,84,104);
           rect(xi,yi,5,5);
       }
   }
@@ -607,6 +607,7 @@ void draw_bg(bgo, x,y) {
     break;
     
    case 'bb':
+    draw_brick(x,y);
     draw_bb(x,y);
     break;
   
