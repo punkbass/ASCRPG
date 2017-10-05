@@ -34,11 +34,18 @@ function tutorCheck(tutor) {
 }
 
 function tutorTalk(tutor) {
-    var thingie = tutor.name + ": Hi, I am " + tutor.name + ", if you need help with ";
+  var thingie = '';
+  if (tutor.Subjects.indexOf("Spanish") > -1) {
+    thingie = 'Hola, soy ' + tutor.name + '. Soy tutor de español y otras cosas. Pero me encanta enseñar español. '
+    thingie +=  'Por favor, haga una cita española en ';
+    thingie += '<a href="http://usm.mywconline.com" target="_blank">usm.mywconline.com</a>';
+  } else {
+    thingie = tutor.name + ": Hi, I am " + tutor.name + ", if you need help with ";
     thingie += listSubjects(tutor);
     thingie += 'make an <a href="http://usm.mywconline.com" target="_blank">appointment</a> with me at ';
     thingie += '<a href="http://usm.mywconline.com" target="_blank">usm.mywconline.com</a>';
-    print(thingie);
+  }
+  print(thingie);
 }
     
 // Tutors
@@ -55,7 +62,7 @@ var Tr1 = {
     tutorCheck(this);
   },
   talk() {
-    tutorCheck(this);
+    tutorTalk(this);
   }
 };
 
@@ -72,7 +79,7 @@ var Tr2 = {
     tutorCheck(this);
   },
   talk() {
-    tutorCheck(this);
+    tutorTalk(this);
   }
 };
 
@@ -89,7 +96,7 @@ var Tr3 = {
     tutorCheck(this);
   },
   talk() {
-    tutorCheck(this);
+    tutorTalk(this);
   }
 };
 
@@ -106,7 +113,7 @@ var Tr4 = {
     tutorCheck(this);
   },
   talk() {
-    tutorCheck(this);
+    tutorTalk(this);
   }
 };
 
