@@ -436,7 +436,7 @@ void draw_bb(x,y) {
   x = 20*x-20;
   y = 20*y-15;
   for(var xi = x; xi < x+20; xi+=5) {
-      for(var yi = y; yi < y+16; yi+=5) {
+      for(var yi = y; yi < y+14; yi+=5) {
           noStroke();
           draw_randomColor(220,240,155,175,84,104);
           rect(xi,yi,5,5);
